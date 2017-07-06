@@ -1,0 +1,146 @@
+{
+    "nameReport": "Estructura1  ",
+    "LongitudPagina": 66,
+    "MargenSuperior": 0,
+    "MargenInferior": 0,
+    "SangriaDeImpresora":0,
+    "ColumnaMargenDerecho":80,
+    "Condensado": "no",
+    "EncabezadoPagina": {
+        "LongitudEncabezadoPagina": 4,
+        "Estructura": {
+           "titulo": {
+                "tipo":"texto",
+                "fila": 1,
+                "columna": 4,
+                "longitud": 17,
+                "contenido": "Lista de Clientes",
+                "formato": ["negrita","subrayado"]
+           },
+           "fecha": {
+                "tipo":"datenow",
+                "fila": 1,
+                "columna": 69,
+                "longitud": 10,
+                "formato": ["normal"]
+           },
+           "codigo": {
+                "tipo":"texto",
+                "fila": 2,
+                "columna": 0,
+                "longitud": 6,
+                "contenido": "Código",
+                "formato": ["negrita"]
+           },
+           "consultor": {
+                "tipo":"texto",
+                "fila": 2,
+                "columna": 11,
+                "longitud": 13,
+                "contenido": "Consultor",
+                "formato": ["negrita"]
+           },
+           "correo": {
+                "tipo":"texto",
+                "fila": 2,
+                "columna": 42,
+                "longitud": 18,
+                "contenido": "Correo Electrónico",
+                "formato": ["negrita","italica"]
+           },
+           "subraya": {
+                "tipo":"texto",
+                "fila": 3,
+                "columna": 0,
+                "longitud": 80,
+                "contenido": "|",
+                "formato": ["normal"],
+                "repeate2end": "yes"
+           }
+        }
+    },
+    "DetallePagina": {
+        "LongitudDetallePagina": 58,
+        "Estructura": {
+            "consultores.codigo": {
+                "tipo":"data",
+                "fila": 0,
+                "columna": 0,
+                "longitud": 10,
+                "contenido": "consultores.codigo",
+                "formato": ["normal"]
+            },
+            "consultores.consultor": {
+                "tipo":"data",
+                "fila": 0,
+                "columna": 11,
+                "longitud": 30,
+                "contenido": "consultores.consultor",
+                "formato": ["negrita","italica"]
+            },
+            "consultores.correo": {
+                "tipo":"data",
+                "fila": 0,
+                "columna": 42,
+                "longitud": 30,
+                "contenido": "consultores.correo",
+                "formato": ["normal"]
+            }
+        }
+    },
+    "PiePagina": {
+        "LongitudPiePagina": 4,
+        "Estructura": {
+            "subraya": {
+                "tipo":"texto",
+                "fila": 0,
+                "columna": 0,
+                "longitud": 80,
+                "contenido": "=",
+                "formato": ["normal"],
+                "repeate2end": "yes"
+            },
+            "pagina": {
+                "tipo":"texto",
+                "fila": 2,
+                "columna": 67,
+                "longitud": 7,
+                "contenido": "Página:",
+                "formato": ["normal"]
+            },
+            "numero_pagina": {
+                "tipo":"pagenum",
+                "fila": 2,
+                "columna": 75,
+                "longitud": 4,
+                "formato": ["normal"]
+            }
+        }
+    },
+    "TituloPagina": {
+        "LongitudTituloPagina": 0,
+        "Estructura": {
+            
+        }
+    },
+    "ResumenPagina": {
+        "LongitudResumenPagina": 0,
+        "Estructura": {
+            
+        }
+    },    
+    "Informacion" : {
+        "consultores": {
+            "tipo":"lista",
+            "Origen": "sqlquery",
+            "Sentencia": "select codigo,concat(nombres,' ',apellidos) as consultor, correo from consultores",
+            "dbms": "mysqli"
+        },
+        "consultores2": {
+            "tipo": "lista",
+            "Origen": "sqlquery",
+            "Sentencia": "select codigo,concat(nombres,' ',apellidos) as consultor, correo from consultores limit 0,400",
+            "dbms": "mysqli"
+        }
+    }
+}
